@@ -9,6 +9,7 @@ import { Product, products } from '../products';
   styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent implements OnInit {
+
   product: Product | undefined;
 
   constructor(private route: ActivatedRoute) {}
@@ -16,12 +17,14 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit() {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
+    //assuming Number() is number and String() would be string???
     const productIdFromRoute = Number(routeParams.get('productId'));
 
     // Find the product that correspond with the id provided in route.
     this.product = products.find(
     (product) => product.id === productIdFromRoute
     );
+    
   }
 
   // ngOnInit(): void {

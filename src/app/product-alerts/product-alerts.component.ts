@@ -13,5 +13,5 @@ export class ProductAlertsComponent implements OnInit {
 
   @Input() product!: Product;
   @Output() notify = new EventEmitter();
-  price = 700;
+  price = 500;
 }
