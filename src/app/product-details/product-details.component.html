@@ -5,3 +5,14 @@
   <h4>{{ product.price | currency }}</h4>
   <p>{{ product.description }}</p>
 </div>
+
+<button type="button" style="backgroundColor:green;">
+  <a
+    style="color:white;"
+    [routerLink]="['/app.component']"
+    [queryParams]="{ debug: true }"
+    fragment="education"
+  >
+    RETURN
+  </a>
+</button>
